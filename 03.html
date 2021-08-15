@@ -1,0 +1,63 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <title>Counter Project</title>
+
+        <style>
+            .slide-viewer
+            {
+                position: relative;
+                overflow: hidden;
+                height: 300px;
+            }
+            .slide-group
+            {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            .slide
+            {
+                width: 100%;
+                height: 100%;
+                display: none;
+                position: absolute;
+
+            }
+            .slide:first-child
+            {
+                display: block;
+            }
+        </style>
+    </head>
+    <body id="body" class="w-100 h-100 bg-primary">
+        <div class=" position-absolute top-50 start-50 translate-middle text-center mb-5">
+            <p class="p-2 m-2 text-white">slider</p>
+            
+            <div class="slider-viewer">
+                <div class="slide-group">
+                    <div class="slide slide-1">slide 1</div>
+                    <div class="slide slide-2">slide 2</div>
+                    <div class="slide slide-3">slide 3</div>
+                    <div class="slide slide-4">slide 4</div>
+                </div>
+            </div>
+            <div class="slide-buttons"></div>
+            
+            <div>
+                <button id="lower_count" type="button" class="btn btn-danger">Lower Count</button>
+                <button id="add_count" type="button" class="btn btn-danger">Add Count</button>
+                <button id="reset" type="button" class="btn btn-danger">reset</button>
+            </div>
+        </div>
+    </body>
+    <script>
+
+    </script>
+</html>

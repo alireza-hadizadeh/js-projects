@@ -1,0 +1,37 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        
+        <title>Change Background Color Project</title>
+
+    </head>
+    <body id="body" class="w-100 h-100">
+        <div class=" position-absolute top-50 start-50 translate-middle text-center mb-5">
+            <p class="p-2 m-2  ">Change Background Color Project</p>
+            <button id="chang_color" type="button" class="btn btn-primary">change backgroun color</button>
+            <p id="color_text" class="p-2 m-2 bg-white "></p>
+        </div>
+    </body>
+    <script>
+        
+
+        document.getElementById("chang_color").addEventListener("click", function() {
+            var hex_values = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                var rand_inex = Math.floor(Math.random() * 16) ;
+                color = color + hex_values[rand_inex]
+            }
+
+            document.getElementById("body").style.background = color;
+            document.getElementById("color_text").innerText = color;
+
+        console.log(color);
+
+        });
+    </script>
+</html>
