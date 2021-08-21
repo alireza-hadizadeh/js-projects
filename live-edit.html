@@ -1,0 +1,248 @@
+<html dir="rtl" lang="pr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-XfhC/Sid4FIGSXYebcOtcSCRFkd/zZzAMVipf0bNWucloRvcKK2/dpVWodQbQ1Ek" crossorigin="anonymous">        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <title>Summary Text</title>
+
+        <style>
+            #panel
+            {
+                position: fixed;
+                left: 0;
+                width: 250px;
+                padding: 15px;
+                height: 100%;
+                overflow-y: scroll;
+            }
+          
+        </style>
+    </head>
+    <body id="body" class="w-100 h-100 bg-primary">
+        <div class=" position-absolute top-0 start-50 translate-middle text-center mt-5">
+            <p class="p-2 m-2 text-white h1 border-bottom border-white">live Edit</p>
+        </div>
+        <div class=" position-absolute top-50 start-50 translate-middle text-center w-50 bg-gradient bg-white rounded-3 border h-50 shadow p-3  overflow-auto ">
+            <p id="text"> Example </p>
+        </div>
+        <div id="panel" class="rounded bg-white shadow" dir="ltr">
+            <div class="mb-3">
+                <label for="text-edit" class="form-label">Edit Text</label>
+                <textarea class="form-control" id="text-edit" rows="3">Example</textarea>
+            </div>
+            
+            <!-- font size -->
+            <div class="mb-3">
+                <label for="font-size" class="form-label">Font Size</label>
+                <input id="font-size" type="text" class="form-control" placeholder="26px ">
+            </div>
+            <!-- font style -->
+            <div class="mb-3">
+                <label for="font-style" class="form-label">Font Style</label>
+                <select class="form-control" name="" id="font-style">
+                    <option value="normal">normal</option>
+                    <option value="italic">italic</option>
+                    <option value="oblique">oblique</option>
+                    <option value="inherit">inherit</option>
+                    <option value="initial">initial</option>
+                    <option value="unset">unset</option>
+                </select>
+            </div>
+            <!-- font weight -->
+            <div class="mb-3">
+                <label for="font-weight" class="form-label">Font Weight</label>
+                <select class="form-control" name="" id="font-weight">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                    <option value="500" selected>500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                </select>
+            </div>
+            <!-- font variant -->
+            <div class="mb-3">
+                <label for="font-variant" class="form-label">Font variant</label>
+                <select class="form-control" name="" id="font-variant">
+                    <option value="normal">normal</option>
+                    <option value="small-caps">small-caps</option>
+                    <option value="inherit">inherit</option>
+                    <option value="initial">initial</option>
+                    <option value="unset">unset</option>
+                </select>
+            </div>
+
+            <!-- font color -->
+            <div class="mb-3">
+                <label for="font-color" class="form-label">Font Color</label>
+                <input type="color" class="form-control " id="font-color" value="#563d7c" title="Choose your color" style="height: 30px;">
+            </div>
+
+            <!-- text align -->
+            <label  class="form-label">Text align</label>
+            <div class="mb-3" dir="rtl">
+                <div class="btn-group mb-3 text-center d-block m-auto">
+                    <button type="button" class="btn btn-outline-secondary" id="text-align-right" data-bs-toggle="tooltip" data-bs-placement="top" title="Text align Right">
+                        <i class="bi bi-text-right"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" id="text-align-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Text align Center">
+                        <i class="bi bi-text-center"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" id="text-align-left" data-bs-toggle="tooltip" data-bs-placement="top" title="Text align Left">
+                        <i class="bi bi-text-left"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" id="text-align-justify" data-bs-toggle="tooltip" data-bs-placement="top" title="Text align justify Center">
+                        <i class="bi bi-justify"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- text decoration -->
+            <div class="mb-3">
+                <label for="text-decoration" class="form-label">Text Decoration</label>
+                <select class="form-control" name="" id="text-decoration">
+                    <option value="none">none</option>
+                    <option value="overline">overline</option>
+                    <option value="underline">underline</option>
+                    <option value="line-through">line-through</option>
+                    <option value="inherit">inherit</option>
+                </select>
+            </div>
+
+            <!-- text indent -->
+            <div class="mb-3">
+                <label for="text-indent" class="form-label">Text Indent</label>
+                <input id="text-indent" type="text" class="form-control" placeholder="Text Indent">
+            </div>
+            
+            <!-- text shadow -->
+            <div class="mb-3">
+                <label for="text-indent" class="form-label">Text shadow</label>
+                <div class="input-group" dir="rtl" id="text-shadow">
+                    <input type="text" value="0"  class="form-control text-center" id="text-shadow-x" placeholder="X">
+                    <input type="text" value="0"  class="form-control text-center" id="text-shadow-y" placeholder="Y">
+                    <input type="text" value="0"  class="form-control text-center" id="text-shadow-blur" placeholder="Blur">
+                    <input type="color" value="#000000" class="form-control h-auto  text-center" id="text-shadow-color" value="#563d7c" title="Choose your color" >
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    <script>
+        // font size
+        document.getElementById("text-edit").addEventListener("input", function() {
+           var value = document.getElementById("text-edit").value;
+           document.getElementById("text").innerText = value ;
+        });
+        // font size
+        document.getElementById("font-size").addEventListener("input", function() {
+           var value = document.getElementById("font-size").value;
+           document.getElementById("text").style.fontSize = value ;
+        });
+       
+       // font style
+        document.getElementById("font-style").addEventListener("input", function() {
+           var value = document.getElementById("font-style").value;
+           document.getElementById("text").style.fontStyle = value;
+        });
+       
+       // font weight
+        document.getElementById("font-weight").addEventListener("input", function() {
+           var value = document.getElementById("font-weight").value;
+           document.getElementById("text").style.fontWeight = value;
+        });
+     
+        // font variant
+        document.getElementById("font-variant").addEventListener("input", function() {
+           var value = document.getElementById("font-variant").value;
+           document.getElementById("text").style.fontVariant = value;
+        });
+     
+        // font color 
+        document.getElementById("font-color").addEventListener("input", function() {
+           var value = document.getElementById("font-color").value;
+           document.getElementById("text").style.color = value;
+        });
+        
+
+        document.getElementById("text-align-right").addEventListener("click", function() {
+           document.getElementById("text").style.textAlign = "right";
+        });
+        document.getElementById("text-align-center").addEventListener("click", function() {
+           document.getElementById("text").style.textAlign = "center";
+        });
+        document.getElementById("text-align-left").addEventListener("click", function() {
+           document.getElementById("text").style.textAlign = "left";
+        });
+        document.getElementById("text-align-justify").addEventListener("click", function() {
+           document.getElementById("text").style.textAlign = "justify";
+        });
+
+        // text decoration
+        document.getElementById("text-decoration").addEventListener("input", function() {
+           var value = document.getElementById("text-decoration").value;
+           document.getElementById("text").style.textDecoration = value;
+        });
+        
+        // text-indent
+        document.getElementById("text-indent").addEventListener("input", function() {
+           var value = document.getElementById("text-indent").value;
+           document.getElementById("text").style.textIndent = value;
+        });
+        
+        // text-shadow
+        
+        document.getElementById("text-shadow-x").addEventListener("input", function() {
+            var ts_x = document.getElementById("text-shadow-x").value;  
+            var ts_y = document.getElementById("text-shadow-y").value;  
+            var ts_blur = document.getElementById("text-shadow-blur").value;
+            var ts_color = document.getElementById("text-shadow-color").value;  
+            
+            var value = ts_x.toString()+ "px " + ts_y.toString()+ "px " + ts_blur.toString()+ "px " + ts_color;
+           document.getElementById("text").style.textShadow = value;
+           console.log(value);
+        });
+        document.getElementById("text-shadow-y").addEventListener("input", function() {
+            var ts_x = document.getElementById("text-shadow-x").value;  
+            var ts_y = document.getElementById("text-shadow-y").value;  
+            var ts_blur = document.getElementById("text-shadow-blur").value;
+            var ts_color = document.getElementById("text-shadow-color").value;  
+            
+            var value = ts_x.toString()+ "px " + ts_y.toString()+ "px " + ts_blur.toString()+ "px " + ts_color;
+           document.getElementById("text").style.textShadow = value;
+           console.log(value);
+
+        });
+        document.getElementById("text-shadow-blur").addEventListener("input", function() {
+            var ts_x = document.getElementById("text-shadow-x").value;  
+            var ts_y = document.getElementById("text-shadow-y").value;  
+            var ts_blur = document.getElementById("text-shadow-blur").value;
+            var ts_color = document.getElementById("text-shadow-color").value; 
+            
+            var value = ts_x.toString()+ "px " + ts_y.toString()+ "px " + ts_blur.toString()+ "px " + ts_color;
+           document.getElementById("text").style.textShadow = value;
+           console.log(value);
+
+        });
+        document.getElementById("text-shadow-color").addEventListener("input", function() {
+            var ts_x = document.getElementById("text-shadow-x").value;  
+            var ts_y = document.getElementById("text-shadow-y").value;  
+            var ts_blur = document.getElementById("text-shadow-blur").value;
+            var ts_color = document.getElementById("text-shadow-color").value; 
+            
+            var value = ts_x.toString()+ "px " + ts_y.toString()+ "px " + ts_blur.toString()+ "px " + ts_color;
+           document.getElementById("text").style.textShadow = value;
+           console.log(value);
+
+        });
+
+        
+    </script>
+</html>
